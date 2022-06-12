@@ -15,4 +15,4 @@ import { ProductListComponent } from './product-list/product-list.component';
     CommonModule
   ]
 })
-export class ProductModule { }
+export class ProductsModule { }
