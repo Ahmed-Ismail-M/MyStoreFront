@@ -11,19 +11,19 @@ export class ProductListComponent implements OnInit {
   constructor() {
     this.productList = [
       {
-        id: 1,
+        id: Math.floor(Math.random() * 2000) + 1,
         name: (Math.random() + 1).toString(36).substring(7),
         category: (Math.random() + 1).toString(36).substring(7),
-        price: Math.random(),
+        price: Math.floor(Math.random() * 2000) + 1,
         img_url: `https://picsum.photos/id/${
           Math.floor(Math.random() * 20) + 1
         }/100/100`,
       },
       {
-        id: 2,
+        id: Math.floor(Math.random() * 2000) + 1,
         name: (Math.random() + 1).toString(36).substring(7),
         category: (Math.random() + 1).toString(36).substring(7),
-        price: Math.random(),
+        price: Math.floor(Math.random() * 2000) + 1,
         img_url: `https://picsum.photos/id/${
           Math.floor(Math.random() * 20) + 1
         }/100/100`,
