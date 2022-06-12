@@ -12,9 +12,18 @@ export class ProductListComponent implements OnInit {
     this.productList = [
       {
         id: 1,
-        name: 'test',
-        category: 'test cat',
-        price: 2.4,
+        name: (Math.random() + 1).toString(36).substring(7),
+        category: (Math.random() + 1).toString(36).substring(7),
+        price: Math.random(),
+        img_url: `https://picsum.photos/id/${
+          Math.floor(Math.random() * 20) + 1
+        }/100/100`,
+      },
+      {
+        id: 2,
+        name: (Math.random() + 1).toString(36).substring(7),
+        category: (Math.random() + 1).toString(36).substring(7),
+        price: Math.random(),
         img_url: `https://picsum.photos/id/${
           Math.floor(Math.random() * 20) + 1
         }/100/100`,
