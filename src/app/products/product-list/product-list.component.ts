@@ -10,7 +10,7 @@ export class ProductListComponent implements OnInit {
   productList: Product[] = []
   constructor() {
     this.productList = [
-      {id:1, name:'test', category:'test cat', price:2.4}
+      {id:1, name:'test', category:'test cat', price:2.4, img_url:`https://picsum.photos/id/${Math.floor(Math.random() * 20) + 1}/200/300`}
     ]
    }
 
