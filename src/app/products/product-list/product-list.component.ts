@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Random } from 'src/app/utils/random';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -8,24 +9,24 @@ import { Product } from '../models/product.model';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
-  constructor() {
+  constructor(private random: Random) {
     this.productList = [
       {
-        id: Math.floor(Math.random() * 2000) + 1,
-        name: (Math.random() + 1).toString(36).substring(7),
-        category: (Math.random() + 1).toString(36).substring(7),
-        price: Math.floor(Math.random() * 2000) + 1,
+        id: this.random.randomNo(2000, 1),
+        name: this.random.randomString(),
+        category: this.random.randomString(),
+        price:this.random.randomNo(2000, 1),
         img_url: `https://picsum.photos/id/${
-          Math.floor(Math.random() * 20) + 1
+          this.random.randomNo(200, 1) + 1
         }/100/100`,
       },
       {
-        id: Math.floor(Math.random() * 2000) + 1,
-        name: (Math.random() + 1).toString(36).substring(7),
-        category: (Math.random() + 1).toString(36).substring(7),
-        price: Math.floor(Math.random() * 2000) + 1,
+        id:this.random.randomNo(2000, 1),
+        name: this.random.randomString(),
+        category: this.random.randomString(),
+        price:this.random.randomNo(2000, 1),
         img_url: `https://picsum.photos/id/${
-          Math.floor(Math.random() * 20) + 1
+          this.random.randomNo(200, 1) + 1
         }/100/100`,
       },
     ];
