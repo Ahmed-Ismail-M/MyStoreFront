@@ -10,6 +10,8 @@ import { ProductListComponent } from './product-list/product-list.component';
   ],
   imports: [
     CommonModule
+  ], exports:[
+    ProductListComponent
   ]
 })
 export class ProductsModule { }
