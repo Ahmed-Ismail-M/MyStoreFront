@@ -11,8 +11,18 @@ export class ProductListComponent implements OnInit {
   productList: Product[] = [];
   constructor(private random: Random) {
     this.productList = [
+      
       {
         id: this.random.randomNo(2000, 1),
+        name: this.random.randomString(),
+        category: this.random.randomString(),
+        price:this.random.randomNo(2000, 1),
+        img_url: `https://picsum.photos/id/${
+          this.random.randomNo(100, 1) + 1
+        }/100/100`,
+      },
+      {
+        id:this.random.randomNo(2000, 1),
         name: this.random.randomString(),
         category: this.random.randomString(),
         price:this.random.randomNo(2000, 1),
@@ -32,5 +42,6 @@ export class ProductListComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }
