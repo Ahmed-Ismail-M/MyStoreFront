@@ -20,6 +20,7 @@ export class ProductListComponent implements OnInit {
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(100, 1) + 1
         }/100/100`,
+        descr : this.random.randomString()
       },
       {
         id:this.random.randomNo(2000, 1),
@@ -29,6 +30,7 @@ export class ProductListComponent implements OnInit {
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(200, 1) + 1
         }/100/100`,
+        descr : this.random.randomString()
       },
       {
         id:this.random.randomNo(2000, 1),
@@ -38,6 +40,7 @@ export class ProductListComponent implements OnInit {
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(200, 1) + 1
         }/100/100`,
+        descr : this.random.randomString()
       },
     ];
   }
