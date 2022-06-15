@@ -1,4 +1,3 @@
 .product-display{
-    display: inline-grid;
-  grid-template-columns: auto auto;
+    display: flex;
 }
