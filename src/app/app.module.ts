@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ProductsModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
   ],
   providers: [Random],
   bootstrap: [AppComponent]

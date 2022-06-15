@@ -1,3 +1,8 @@
-.title{
-    font-size: xx-large;
-}
+.card {
+    max-width: 100px;
+    margin: 100px;
+  }
+  
+  .header-image {
+    background: size 100px;
+  }
