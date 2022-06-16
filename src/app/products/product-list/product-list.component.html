@@ -1,7 +1,8 @@
 <div>{{ cart?.length }}</div>
-<app-product
-  class="product-display"
-  *ngFor="let product of productList"
-  [product]="product"
-  (addProduct)="addProduct($event)"
-></app-product>
+<div class="product-display">
+  <app-product
+    *ngFor="let product of productList"
+    [product]="product"
+    (addProduct)="addProduct($event)"
+  ></app-product>
+</div>
