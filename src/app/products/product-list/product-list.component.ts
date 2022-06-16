@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Random } from 'src/app/utils/random';
+import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -10,40 +10,8 @@ import { Product } from '../models/product.model';
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
   cart : Product[] = []
-  constructor(private random: Random) {
-    this.productList = [
-      
-      {
-        id: this.random.randomNo(2000, 1),
-        name: this.random.randomString(),
-        category: this.random.randomString(),
-        price:this.random.randomNo(2000, 1),
-        img_url: `https://picsum.photos/id/${
-          this.random.randomNo(100, 1) + 1
-        }/300/300`,
-        descr : this.random.randomString()
-      },
-      {
-        id:this.random.randomNo(2000, 1),
-        name: this.random.randomString(),
-        category: this.random.randomString(),
-        price:this.random.randomNo(2000, 1),
-        img_url: `https://picsum.photos/id/${
-          this.random.randomNo(2000, 1) + 1
-        }/300/300`,
-        descr : this.random.randomString()
-      },
-      {
-        id:this.random.randomNo(2000, 1),
-        name: this.random.randomString(),
-        category: this.random.randomString(),
-        price:this.random.randomNo(2000, 1),
-        img_url: `https://picsum.photos/id/${
-          this.random.randomNo(2000, 1) + 1
-        }/300/300`,
-        descr : this.random.randomString()
-      },
-    ];
+  constructor(private productService: ProductService) {
+    this.productList = this.productService.getProducts();
   }
 
   ngOnInit(): void {
