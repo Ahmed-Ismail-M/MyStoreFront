@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
         price:this.random.randomNo(2000, 1),
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(100, 1) + 1
-        }/200/200`,
+        }/300/300`,
         descr : this.random.randomString()
       },
       {
@@ -29,7 +29,7 @@ export class ProductListComponent implements OnInit {
         price:this.random.randomNo(2000, 1),
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(2000, 1) + 1
-        }/200/200`,
+        }/300/300`,
         descr : this.random.randomString()
       },
       {
@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
         price:this.random.randomNo(2000, 1),
         img_url: `https://picsum.photos/id/${
           this.random.randomNo(2000, 1) + 1
-        }/200/200`,
+        }/300/300`,
         descr : this.random.randomString()
       },
     ];
