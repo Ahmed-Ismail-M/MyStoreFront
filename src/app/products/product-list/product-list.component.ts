@@ -47,4 +47,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  hideProduct(product: Product): void{
+    console.log(product)
+  }
 }

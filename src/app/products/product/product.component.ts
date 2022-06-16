@@ -9,7 +9,7 @@ import { Product } from '../models/product.model';
 export class ProductComponent implements OnInit {
   @Input()
   product!: Product;
-  @Output() hideProduct: EventEmitter<Product> = new EventEmitter();
+  @Output() hideProduct: EventEmitter<Product> = new EventEmitter;
   constructor() {}
 
   ngOnInit(): void {}
