@@ -1,6 +1,7 @@
 .card {
-    max-width: 200px;
-    margin:10px auto;
+    max-width: auto;
+    max-height: auto;
+    margin:10px;
   }
   
   .header-image {
