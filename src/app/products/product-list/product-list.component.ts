@@ -9,6 +9,7 @@ import { Product } from '../models/product.model';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
+  cart : Product[] = []
   constructor(private random: Random) {
     this.productList = [
       
@@ -47,7 +48,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  hideProduct(product: Product): void{
-    console.log(product)
+  addProduct(product: Product): void{
+    this.productList = this.productList.filter(p => p.id !== product.id)
   }
 }
