@@ -49,6 +49,6 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
   addProduct(product: Product): void{
-    this.productList = this.productList.filter(p => p.id !== product.id)
+    this.cart.push(product)
   }
 }
