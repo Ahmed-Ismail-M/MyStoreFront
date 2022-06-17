@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatListModule} from '@angular/material/list'
 import {MatIconModule} from '@angular/material/icon'
+import {MatToolbarModule} from '@angular/material/toolbar'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import {MatIconModule} from '@angular/material/icon'
     BrowserAnimationsModule,
     MatTabsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule, MatToolbarModule
   ],
   providers: [Random],
   bootstrap: [AppComponent]
