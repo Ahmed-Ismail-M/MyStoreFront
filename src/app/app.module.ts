@@ -9,15 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-import {MatListModule} from '@angular/material/list'
-import {MatIconModule} from '@angular/material/icon'
-import {MatToolbarModule} from '@angular/material/toolbar'
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,9 +26,10 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     BrowserAnimationsModule,
     MatTabsModule,
     MatListModule,
-    MatIconModule, MatToolbarModule
+    MatIconModule,
+    MatToolbarModule,
   ],
   providers: [Random],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
