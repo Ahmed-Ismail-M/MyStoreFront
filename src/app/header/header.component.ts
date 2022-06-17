@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  links = ['Products', 'Todo'];
   tabs = [{'label':"Main", 'path':''}, {'label':'Todo', 'path':'confirmation'}]
-  activeLink = this.links[0];
+  activeLink = this.tabs[0].label;
   constructor() { }
 
   ngOnInit(): void {

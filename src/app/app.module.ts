@@ -9,7 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-
+import {MatListModule} from '@angular/material/list'
+import {MatIconModule} from '@angular/material/icon'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     ProductsModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [Random],
   bootstrap: [AppComponent]
