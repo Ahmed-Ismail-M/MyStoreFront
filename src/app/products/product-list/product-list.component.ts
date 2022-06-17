@@ -9,14 +9,13 @@ import { Product } from '../models/product.model';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
-  cart : Product[] = []
+  cart: Product[] = [];
   constructor(private productService: ProductService) {
     this.productList = this.productService.getProducts();
   }
 
-  ngOnInit(): void {
-  }
-  addProduct(product: Product): void{
-    this.cart.push(product)
+  ngOnInit(): void {}
+  addProduct(product: Product): void {
+    this.cart.push(product);
   }
 }
