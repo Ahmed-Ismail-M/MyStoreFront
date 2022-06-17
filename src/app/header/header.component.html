@@ -3,11 +3,12 @@
       <a mat-list-item [routerLink]="obj.path" routerLinkActive="active">{{ obj.label }}</a>
    </mat-list-item>
  </mat-nav-list> -->
- <mat-toolbar>
-
-    <nav class="docs-navbar-header">
-      <mat-list-item *ngFor="let obj of tabs">
-       <a mat-list-item [routerLink]="obj.path" routerLinkActive="active">{{ obj.label }}</a>
-      </mat-list-item>
-    </nav>
- </mat-toolbar>
+<mat-toolbar>
+  <nav class="docs-navbar-header">
+    <mat-list-item *ngFor="let obj of tabs">
+      <a mat-list-item [routerLink]="obj.path" routerLinkActive="active">{{
+        obj.label
+      }}</a>
+    </mat-list-item>
+  </nav>
+</mat-toolbar>
