@@ -1,8 +1,8 @@
 <nav mat-tab-nav-bar  [tabPanel]="tabPanel">
-  <a mat-tab-link *ngFor="let link of tabs | keyvalue"
-     (click)="activeLink = link.key"
-     [active]="activeLink == link.key"
-     [routerLink]="link.value"> {{link.key}} </a>
+  <a mat-tab-link *ngFor="let obj of tabs"
+     (click)="activeLink = obj.label"
+     [active]="activeLink == obj.label"
+     [routerLink]="obj.path"> {{obj.label}} </a>
   <a mat-tab-link disabled>Disabled Link</a>
   <!-- <a mat-tab-link *ngFor="let link of links"
      (click)="activeLink = link"
