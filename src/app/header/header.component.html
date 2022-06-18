@@ -4,9 +4,15 @@
    </mat-list-item>
  </mat-nav-list> -->
 <mat-toolbar>
-    <mat-list-item *ngFor="let obj of tabs">
-      <a mat-list-item [routerLink]="obj.path" routerLinkActive="active">{{
-        obj.label
-      }}</a>
-    </mat-list-item>
+  <div *ngFor="let obj of tabs">
+    <span class="mat-button-wrapper">
+      <a
+        class="list-item"
+        mat-list-item
+        [routerLink]="obj.path"
+        routerLinkActive="active"
+        >{{ obj.label }}</a
+      >
+    </span>
+  </div>
 </mat-toolbar>
