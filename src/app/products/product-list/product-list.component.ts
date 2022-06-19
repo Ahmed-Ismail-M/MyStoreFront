@@ -16,9 +16,10 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = this.productService.getProducts()
+    this.cart = this.cartService.cart
   }
   addToCart(product: Product): void {
     this.cartService.add(product)
-    alert('Added')
+    alert('Added '+ product.name)
   }
 }
