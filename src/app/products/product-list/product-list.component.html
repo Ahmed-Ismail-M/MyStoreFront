@@ -1,8 +1,8 @@
-<div>Cart Items {{ cart?.length }}</div>
+<div>Cart Items {{ cartService.getLength()}}</div>
 <div class="product-display">
   <app-product
-    *ngFor="let product of productList"
+    *ngFor="let product of productService.getProducts()"
     [product]="product"
-    (addProduct)="addProduct($event)"
+    (addProduct)="addToCart($event)"
   ></app-product>
 </div>

@@ -9,9 +9,7 @@ import { Product } from '../models/product.model';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  productList: Product[] = [];
-  constructor(private productService: ProductService , private cartService: CartService) {
-    this.productList = this.productService.getProducts();
+  constructor(public productService: ProductService , public cartService: CartService) {
   }
 
   ngOnInit(): void {}

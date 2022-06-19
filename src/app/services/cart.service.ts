@@ -21,4 +21,8 @@ export class CartService {
   clear(){
     this.cart = []
   }
+
+  getLength(): Number{
+    return this.cart.length
+  }
 }
