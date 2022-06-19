@@ -20,6 +20,6 @@ export class ProductListComponent implements OnInit {
   }
   addToCart(product: Product): void {
     this.cartService.add(product)
-    alert('Added '+ product.name)
+    alert(product.name + ' added to cat' )
   }
 }
