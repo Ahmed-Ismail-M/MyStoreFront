@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   tabs = [
-    { label: 'Main', path: '' },
-    { label: 'Todo', path: 'confirmation' },
+    { label: 'Products', path: '' },
+    { label: 'Cart', path: 'confirmation' },
   ];
   activeLink = this.tabs[0].label;
   constructor() {}
