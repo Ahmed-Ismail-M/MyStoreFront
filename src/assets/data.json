@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "img_url": "https://picsum.photos/200/300?random=1",
-    "name": "My Product",
+    "img_url": "https://picsum.photos/200/200?random=1",
+    "name": "Product",
     "category": "Main",
     "price": 200,
     "descr": "First of the category"
   },
   {
     "id": 2,
-    "img_url": "https://picsum.photos/200/300?random=2",
-    "name": "Another Product",
+    "img_url": "https://picsum.photos/200/200?random=2",
+    "name": "Product",
     "category": "Extra",
     "price": 210,
-    "descr": "Added to support the previous one"
+    "descr": "Added to support"
   },
   {
     "id": 3,
-    "img_url": "https://picsum.photos/200/300?random=3",
-    "name": "Extra Product",
+    "img_url": "https://picsum.photos/200/200?random=3",
+    "name": "Product",
     "category": "Extra",
     "price": 220,
-    "descr": "An extra featured one"
+    "descr": "An extra sdsd d s dddddddddddddddddddd d  "
   }
 ]
