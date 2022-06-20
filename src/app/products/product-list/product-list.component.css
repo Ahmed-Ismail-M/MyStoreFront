@@ -1,7 +1,8 @@
 .product-display {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin-bottom: 64px;
 
 }

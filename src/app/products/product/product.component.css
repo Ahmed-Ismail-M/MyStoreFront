@@ -2,7 +2,11 @@
   max-width: 400px;
   max-height: auto;
 }
-
-.header-image {
-  background: size 100px;
+img {
+  border-radius: 10px;
+  width: 320px;
 }
+
+/* .header-image {
+  background: size 100px;
+} */
