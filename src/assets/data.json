@@ -2,25 +2,25 @@
   {
     "id": 1,
     "img_url": "https://picsum.photos/200/300?random=1",
-    "name": "random",
-    "category": "random",
+    "name": "My Product",
+    "category": "Main",
     "price": 200,
-    "descr": "random desc"
+    "descr": "First of the category"
   },
   {
     "id": 2,
     "img_url": "https://picsum.photos/200/300?random=2",
-    "name": "random",
-    "category": "random",
+    "name": "Another Product",
+    "category": "Extra",
     "price": 200,
-    "descr": "random desc"
+    "descr": "Added to support the previous one"
   },
   {
     "id": 3,
     "img_url": "https://picsum.photos/200/300?random=3",
-    "name": "random",
-    "category": "random",
+    "name": "Extra Product",
+    "category": "Extra",
     "price": 200,
-    "descr": "random desc"
+    "descr": "An extra featured one"
   }
 ]
