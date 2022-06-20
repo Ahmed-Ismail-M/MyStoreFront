@@ -12,7 +12,7 @@
     "img_url": "https://picsum.photos/200/300?random=2",
     "name": "Another Product",
     "category": "Extra",
-    "price": 200,
+    "price": 210,
     "descr": "Added to support the previous one"
   },
   {
@@ -20,7 +20,7 @@
     "img_url": "https://picsum.photos/200/300?random=3",
     "name": "Extra Product",
     "category": "Extra",
-    "price": 200,
+    "price": 220,
     "descr": "An extra featured one"
   }
 ]
