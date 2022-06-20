@@ -10,7 +10,7 @@
   {
     "id": 2,
     "img_url": "https://picsum.photos/200/200?random=2",
-    "name": "Product",
+    "name": "Added Product",
     "category": "Extra",
     "price": 210,
     "descr": "Added to support"
@@ -18,9 +18,9 @@
   {
     "id": 3,
     "img_url": "https://picsum.photos/200/200?random=3",
-    "name": "Product",
+    "name": "Extra Product",
     "category": "Extra",
     "price": 220,
-    "descr": "An extra sdsd d s dddddddddddddddddddd d  "
+    "descr": "An extra"
   }
 ]
