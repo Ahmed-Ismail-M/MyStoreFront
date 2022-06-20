@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -10,10 +11,13 @@ export class ProductComponent implements OnInit {
   @Input()
   product!: Product;
   @Output() addProduct: EventEmitter<Product> = new EventEmitter();
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
   add(product: Product) {
     this.addProduct.emit(product);
+  }
+  showDetails(product: Product){
+    this.router.navigate(['/product'], {queryParams:product})
   }
 }
