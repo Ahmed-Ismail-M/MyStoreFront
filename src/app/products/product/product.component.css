@@ -1,13 +1,7 @@
 .card {
-  max-width: 400px;
-  max-height: auto;
   margin: 10px;
 }
 img {
   border-radius: 10px;
-  width: 320px;
+  width: 220px;
 }
-
-/* .header-image {
-  background: size 100px;
-} */

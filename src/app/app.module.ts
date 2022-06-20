@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { Random } from './utils/random';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { MatListModule } from '@angular/material/list';
@@ -19,7 +18,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
+
     ConfirmationComponent,
   ],
   imports: [
