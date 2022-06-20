@@ -1,1 +1,6 @@
-[{"name":"test"}]
+[{"id": 1,
+    "img_url":"`https://picsum.photos/id/1",
+    "name": "random",
+    "category": "random",
+    "price": 200,
+    "descr": "random desc"}]
