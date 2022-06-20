@@ -9,19 +9,21 @@ import { Product } from '../models/product.model';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  products : Product [] = []
-  cart : Product [] = []
-  constructor(private productService: ProductService , private cartService: CartService) {
-  }
+  products: Product[] = [];
+  cart: Product[] = [];
+  constructor(
+    private productService: ProductService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(res=>{
-      this.products = res
-    })
-    this.cart = this.cartService.cart
+    this.productService.getProducts().subscribe((res) => {
+      this.products = res;
+    });
+    this.cart = this.cartService.cart;
   }
   addToCart(product: Product): void {
-    this.cartService.add(product)
-    alert(product.name + ' added to cat' )
+    this.cartService.add(product);
+    alert(product.name + ' added to cat');
   }
 }
