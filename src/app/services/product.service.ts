@@ -10,7 +10,7 @@ import { Random } from '../utils/random';
 export class ProductService {
   constructor(private random: Random, private http:HttpClient) {}
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('https://jsonplaceholder.typicode.com/posts')
+    return this.http.get<Product[]>('http://127.0.0.1:4200/assets/data.json')
   }
 }
 // [
