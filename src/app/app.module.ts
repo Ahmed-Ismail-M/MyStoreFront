@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HeaderComponent,
 
     ConfirmationComponent,
+      CartComponent,
   ],
   imports: [
     BrowserModule,
