@@ -19,3 +19,7 @@ body {
     white-space: nowrap;
     justify-content: center;
   }
+  img {
+    border-radius: 10px;
+    width: 220px;
+  }
