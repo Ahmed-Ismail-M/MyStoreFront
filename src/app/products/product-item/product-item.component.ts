@@ -12,7 +12,6 @@ export class ProductItemComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const product = this.route.snapshot.paramMap.get('product')
-    console.log(product)
+    this.product = history.state
   }
 }

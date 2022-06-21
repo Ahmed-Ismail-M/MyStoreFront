@@ -18,6 +18,6 @@ export class ProductComponent implements OnInit {
     this.addProduct.emit(product);
   }
   showDetails(product: Product){
-    this.router.navigate(['/product', {'product':product}])
+    this.router.navigateByUrl('/product',{state:product})
   }
 }
