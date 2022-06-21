@@ -5,7 +5,6 @@ import { ProductComponent } from './product/product.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { RouterModule } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -13,7 +12,6 @@ import { CartComponent } from './cart/cart.component';
     ProductListComponent,
     ProductComponent,
     ProductItemComponent,
-    CartComponent
   ],
   imports: [
     CommonModule,
