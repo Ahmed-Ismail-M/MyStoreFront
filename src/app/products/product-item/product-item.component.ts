@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -9,9 +8,9 @@ import { Product } from '../models/product.model';
 })
 export class ProductItemComponent implements OnInit {
   product!: Product;
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.product = history.state
+    this.product = history.state;
   }
 }
