@@ -26,3 +26,6 @@ body {
   a:link {
     text-decoration: none;
   }
+  a{
+    cursor: pointer;
+  }
