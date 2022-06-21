@@ -10,5 +10,5 @@
   .product-display > div {
     text-align: center;
   
-    margin: 50px;  /* and that, will result in a 10px gap */
+    margin: 50px;
   }
