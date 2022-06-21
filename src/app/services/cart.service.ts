@@ -25,4 +25,7 @@ export class CartService {
   getLength(): Number{
     return this.cart.length
   }
+  getCart():Product[]{
+    return this.cart
+  }
 }
