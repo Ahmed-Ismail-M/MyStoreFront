@@ -10,6 +10,7 @@ export class CartService {
   }
   add(product: Product): Product[] {
     this.cart.push(product);
+    this.saveCart()
     return this.cart
   }
   remove(product:Product): Product[] {
@@ -17,10 +18,12 @@ export class CartService {
     if (index !== -1) {
       this.cart.splice(index, 1);
     }
+    this.saveCart()
     return this.cart
   }
   clear(){
     this.cart = []
+    this.saveCart()
   }
 
   getLength(): Number{
@@ -28,5 +31,8 @@ export class CartService {
   }
   getCart():Product[]{
     return this.cart
+  }
+  saveCart():void{
+    localStorage.setItem('cart',JSON.stringify(this.cart))
   }
 }
