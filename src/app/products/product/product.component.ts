@@ -18,6 +18,6 @@ export class ProductComponent implements OnInit {
     this.addProduct.emit(product);
   }
   showDetails(product: Product){
-    this.router.navigate(['/product',{'product':JSON.stringify(product)}],{skipLocationChange:true})
+    this.router.navigate(['/product',{'id':(product.id)}])
   }
 }
