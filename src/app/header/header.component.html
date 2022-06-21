@@ -1,13 +1,17 @@
 <mat-toolbar>
-  <div *ngFor="let obj of tabs">
-    <span class="mat-button-wrapper">
-      <a
-        class="list-item"
-        mat-list-item
-        [routerLink]="obj.path"
-        routerLinkActive="active"
-        >{{ obj.label }}</a
-      >
-    </span>
-  </div>
+  <mat-toolbar>{{title}}</mat-toolbar>
+  <mat-toolbar>
+
+    <div *ngFor="let obj of tabs">
+      <span class="mat-button-wrapper">
+        <a
+          class="list-item"
+          mat-list-item
+          [routerLink]="obj.path"
+          routerLinkActive="active"
+          >{{ obj.label }}</a
+        >
+      </span>
+    </div>
+  </mat-toolbar>
 </mat-toolbar>

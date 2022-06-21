@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ export class HeaderComponent implements OnInit {
     { label: 'Products', path: '' },
     { label: 'Cart', path: 'confirmation' },
   ];
+  title: string = environment.title
   activeLink = this.tabs[0].label;
   constructor() {}
 
