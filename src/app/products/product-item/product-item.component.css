@@ -1,8 +1,10 @@
 .product-display {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
     margin: auto;
+    align-items: center;
+    padding: 10px;
     /* margin: 64px; */
   
   }
