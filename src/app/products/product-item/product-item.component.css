@@ -1,0 +1,8 @@
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    /* margin: 64px; */
+  
+  }
