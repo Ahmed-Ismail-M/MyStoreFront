@@ -1,7 +1,12 @@
 <div class="product-display">
-  <img
-  src="{{ product.img_url }}"
-  onerror="this.src='https://picsum.photos/id/1/200/300'" />
+  <div>
+
+    <img
+    src="{{ product.img_url }}"
+    onerror="this.src='https://picsum.photos/id/1/200/300'" />
+  </div>
+  <div>
+
     <mat-card-header>
       <div mat-card-avatar class="header-image"></div>
       <mat-card-title>{{ product.name }}</mat-card-title>
@@ -13,5 +18,6 @@
       <mat-card-actions> </mat-card-actions
         >
     </mat-card-header>
+  </div>
    
 </div>

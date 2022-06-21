@@ -4,7 +4,11 @@
     justify-content:center;
     margin: auto;
     align-items: center;
-    padding: 10px;
     /* margin: 64px; */
   
+  }
+  .product-display > div {
+    text-align: center;
+  
+    margin: 50px;  /* and that, will result in a 10px gap */
   }
