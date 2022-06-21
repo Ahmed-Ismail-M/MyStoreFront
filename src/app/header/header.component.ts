@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class HeaderComponent implements OnInit {
   tabs = [
     { label: 'Products', path: '' },
-    { label: 'Cart', path: 'confirmation' },
+    { label: 'Cart', path: 'cart' },
   ];
   title: string = environment.title
   activeLink = this.tabs[0].label;
