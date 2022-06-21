@@ -23,3 +23,6 @@ body {
     border-radius: 10px;
     width: 220px;
   }
+  a:link {
+    text-decoration: none;
+  }
