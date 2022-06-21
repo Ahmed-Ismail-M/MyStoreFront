@@ -5,8 +5,9 @@ import { Product } from '../products/models/product.model';
   providedIn: 'root'
 })
 export class CartService {
-  cart: Product[] = [];
-  constructor() { }
+  cart: Product[] =JSON.parse(localStorage.getItem('cart')||'[]') ;
+  constructor() { 
+  }
   add(product: Product): Product[] {
     this.cart.push(product);
     return this.cart

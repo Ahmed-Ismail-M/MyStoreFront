@@ -19,9 +19,9 @@ import { CartComponent } from './cart/cart.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-
+    CartComponent,
     ConfirmationComponent,
-      CartComponent,
+
   ],
   imports: [
     BrowserModule,
