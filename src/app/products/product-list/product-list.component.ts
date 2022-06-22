@@ -25,8 +25,8 @@ export class ProductListComponent implements OnInit {
     });
     this.cart = this.cartService.cart;
   }
-  addToCart(product: Product): void {
-    this.cartService.add(product, 1);
-    this._snackBar.open(product.name + ' Added to Cart',"",{duration:1000})
+  addToCart(cartItem: CartItem): void {
+    this.cartService.addItem(cartItem);
+    this._snackBar.open(cartItem.product.name + ' Added to Cart',"",{duration:1000})
   }
 }

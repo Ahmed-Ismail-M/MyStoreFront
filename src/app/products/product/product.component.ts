@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartItem } from 'src/app/models/cartItem.model';
 import { Product } from '../../models/product.model';
 
 @Component({
@@ -10,12 +11,13 @@ import { Product } from '../../models/product.model';
 export class ProductComponent implements OnInit {
   @Input()
   product!: Product;
-  @Output() addProduct: EventEmitter<Product> = new EventEmitter();
+  @Output() addProduct: EventEmitter<CartItem> = new EventEmitter();
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  add(product: Product) {
-    this.addProduct.emit(product);
+  add(event:Event) {
+    console.log((event.target as HTMLInputElement).value)
+    // this.addProduct.emit(cartItem);
   }
   showDetails(product: Product){
     this.router.navigate(['/product',{'id':(product.id)}])
