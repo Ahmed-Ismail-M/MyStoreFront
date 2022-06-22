@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';
+import { CartItem } from '../models/cartItem.model';
 import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  cart: Product[] =JSON.parse(localStorage.getItem('cart')||'[]') ;
+  cart: CartItem[] =JSON.parse(localStorage.getItem('cart')||'[]') ;
   constructor() { 
   }
-  add(product: Product): Product[] {
-    this.cart.push(product);
+  add(cartItem: CartItem): CartItem[] {
+    this.cart.push(cartItem);
     this.saveCart()
     return this.cart
   }
-  remove(product:Product): Product[] {
-    var index = this.cart.indexOf(product);
+  remove(cartItem :CartItem): CartItem[] {
+    var index = this.cart.indexOf(cartItem);
     if (index !== -1) {
       this.cart.splice(index, 1);
     }
@@ -29,7 +30,7 @@ export class CartService {
   getLength(): Number{
     return this.cart.length
   }
-  getCart():Product[]{
+  getCart():CartItem[]{
     return this.cart
   }
   saveCart():void{
