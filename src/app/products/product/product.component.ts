@@ -10,14 +10,14 @@ import { Product } from '../../models/product.model';
 })
 export class ProductComponent implements OnInit {
   @Input()
-  product!: Product;
+  product: Product={name:'', id:0, category:"", descr:"", price:0};
   qty: string='1';
-  @Output() addProduct: EventEmitter<CartItem> = new EventEmitter();
+  @Output() addCartItem: EventEmitter<CartItem> = new EventEmitter();
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
   onSubmit() {
-    this.addProduct.emit({product:this.product, qty:Number(this.qty)});
+    this.addCartItem.emit({product:this.product, qty:Number(this.qty)});
   }
   showDetails(product: Product){
     this.router.navigate(['/product',{'id':(product.id)}])
