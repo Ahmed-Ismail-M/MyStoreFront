@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { find, map, Observable } from 'rxjs';
-import { Product } from '../products/models/product.model';
+import { Product } from '../models/product.model';
 import { Random } from '../utils/random';
 
 @Injectable({
