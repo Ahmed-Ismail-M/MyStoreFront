@@ -11,13 +11,13 @@ import { Product } from '../../models/product.model';
 export class ProductComponent implements OnInit {
   @Input()
   product!: Product;
-  qty: string='';
+  qty: string='1';
   @Output() addProduct: EventEmitter<CartItem> = new EventEmitter();
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  add(event:Event) {
-    console.log((event.target as HTMLInputElement).value)
+  onSubmit() {
+    console.log(this.qty)
     // this.addProduct.emit(cartItem);
   }
   showDetails(product: Product){
