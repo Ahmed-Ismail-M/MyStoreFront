@@ -12,9 +12,7 @@ export class CartService {
     if (this.cart.length > 0) {
       for (let item of this.cart) {
         if (item.product.id == product.id) {
-          item.qty = item.qty + qty;
-          this.saveCart();
-          return this.cart;
+          return this.increament(item, qty);
         }
       }
     }
@@ -22,14 +20,14 @@ export class CartService {
     this.saveCart();
     return this.cart;
   }
-  deduct(product: Product, qty: number): CartItem[] {
+  removeItem(product: Product, qty: number): CartItem[] {
     if (this.cart.length > 0) {
       for (let item of this.cart) {
         if (item.product.id == product.id) {
-          if(item.qty - qty >= 0){
-            item.qty = item.qty - qty;
-            this.saveCart();
-            return this.cart;
+          if (item.qty - qty > 0) {
+            return this.deduct(item, qty);
+          } else {
+            return this.remove(item);
           }
         }
       }
@@ -44,6 +42,17 @@ export class CartService {
     this.saveCart();
     return this.cart;
   }
+  increament(cartItem: CartItem, qty: number): CartItem[] {
+    cartItem.qty = cartItem.qty + qty;
+    this.saveCart();
+    return this.cart;
+  }
+  deduct(cartItem: CartItem, qty: number): CartItem[] {
+    cartItem.qty = cartItem.qty - qty;
+    this.saveCart();
+    return this.cart;
+  }
+
   clear() {
     this.cart = [];
     this.saveCart();
@@ -58,5 +67,4 @@ export class CartService {
   saveCart(): void {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
-
 }
