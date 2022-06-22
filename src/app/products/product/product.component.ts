@@ -17,8 +17,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit() {
-    console.log(this.qty)
-    // this.addProduct.emit(cartItem);
+    this.addProduct.emit({product:this.product, qty:Number(this.qty)});
   }
   showDetails(product: Product){
     this.router.navigate(['/product',{'id':(product.id)}])
