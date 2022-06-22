@@ -6,7 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
