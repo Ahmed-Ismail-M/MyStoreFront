@@ -1,0 +1,14 @@
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: auto;
+    align-items: center;
+    /* margin: 64px; */
+  
+  }
+  .product-display > div {
+    text-align: center;
+  
+    margin: 50px;
+  }
