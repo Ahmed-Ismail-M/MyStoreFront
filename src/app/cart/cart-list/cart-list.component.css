@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content:center;
     margin: auto;
-    align-items: center;
+    align-items: baseline;
     /* margin: 64px; */
   
   }
