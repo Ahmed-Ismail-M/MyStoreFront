@@ -1,8 +1,11 @@
 <div class="product-display">
-    <app-cart-item
-      *ngFor="let cartItem of cart"
-      [cartItem]="cartItem"
-    ></app-cart-item>
+    <div>
+
+      <app-cart-item
+        *ngFor="let cartItem of cart"
+        [cartItem]="cartItem"
+      ></app-cart-item>
+    </div>
     <div>
         <button (click)="emptyCart()">
             Empty Cart

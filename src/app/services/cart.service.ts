@@ -67,7 +67,7 @@ export class CartService {
   saveCart(): void {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
-  getTotal():number{
-    return this.cart.reduce((total, item): number=>{return total + (item.qty*item.product.price)}, 0)
+  getTotal():string{
+    return this.cart.reduce((total, item): number=>{return total + (item.qty*item.product.price)}, 0).toFixed(2)
   }
 }
