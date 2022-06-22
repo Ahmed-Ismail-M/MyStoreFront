@@ -1,10 +1,10 @@
-<mat-card class="card">
+<div class="item">
     <mat-card-header>
       <div mat-card-avatar class="header-image"></div>
       <mat-card-title>{{ cartItem.product.name }}</mat-card-title>
       <mat-card-subtitle>Quantity: {{ cartItem.qty }} Price: {{cartItem.product.price*cartItem.qty}}</mat-card-subtitle>
     </mat-card-header>
-    <img
+    <img class="item-img"
       src="{{ cartItem.product.img_url }}"
       onerror="this.src='https://picsum.photos/id/1/200/300'"
     />
@@ -13,4 +13,4 @@
         {{ cartItem.product.descr }}
       </p>
     </mat-card-content>
-  </mat-card>
+  </div>
