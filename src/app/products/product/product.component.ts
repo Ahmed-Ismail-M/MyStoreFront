@@ -11,6 +11,7 @@ import { Product } from '../../models/product.model';
 export class ProductComponent implements OnInit {
   @Input()
   product!: Product;
+  qty: string='';
   @Output() addProduct: EventEmitter<CartItem> = new EventEmitter();
   constructor(private router: Router) {}
 
