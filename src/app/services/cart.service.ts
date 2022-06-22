@@ -22,6 +22,20 @@ export class CartService {
     this.saveCart();
     return this.cart;
   }
+  deduct(product: Product, qty: number): CartItem[] {
+    if (this.cart.length > 0) {
+      for (let item of this.cart) {
+        if (item.product.id == product.id) {
+          if(item.qty - qty >= 0){
+            item.qty = item.qty - qty;
+            this.saveCart();
+            return this.cart;
+          }
+        }
+      }
+    }
+    return this.cart;
+  }
   remove(cartItem: CartItem): CartItem[] {
     var index = this.cart.indexOf(cartItem);
     if (index !== -1) {
@@ -44,4 +58,5 @@ export class CartService {
   saveCart(): void {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
+
 }
