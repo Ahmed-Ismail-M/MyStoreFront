@@ -15,5 +15,7 @@ export class CartListComponent implements OnInit {
     // this.cart =JSON.parse(localStorage.getItem('cart') || '[]')
     this.cart = this.cartService.getCart()
   }
-
+emptyCart(){
+  this.cartService.clear()
+}
 }

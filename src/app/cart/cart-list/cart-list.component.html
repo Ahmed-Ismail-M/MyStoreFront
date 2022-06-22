@@ -3,4 +3,9 @@
       *ngFor="let cartItem of cart"
       [cartItem]="cartItem"
     ></app-cart-item>
+    <div>
+        <button (click)="emptyCart()">
+            Empty Cart
+        </button>
+    </div>
   </div>
