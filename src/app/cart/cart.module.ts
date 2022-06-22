@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
 @NgModule({
   declarations: [CartListComponent, CartItemComponent],
   imports: [
-    CommonModule, MatCardModule
+    CommonModule, MatCardModule,MatIconModule
   ],
   exports:[CartListComponent]
   

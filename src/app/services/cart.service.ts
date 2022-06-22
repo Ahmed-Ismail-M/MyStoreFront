@@ -20,6 +20,18 @@ export class CartService {
     this.saveCart();
     return this.cart;
   }
+  addItem(item:CartItem):CartItem{
+    if (this.cart.length > 0) {
+      for (let cartItem of this.cart) {
+        if (item.product.id == cartItem.product.id) {
+          cartItem.qty = item.qty
+          this.saveCart()
+        return item}
+  }}
+  this.cart.push(item);
+  this.saveCart();
+  return item;
+}
   removeItem(product: Product, qty: number): CartItem[] {
     if (this.cart.length > 0) {
       for (let item of this.cart) {
