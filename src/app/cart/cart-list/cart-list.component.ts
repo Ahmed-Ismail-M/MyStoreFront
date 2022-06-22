@@ -9,13 +9,16 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartListComponent implements OnInit {
   cart!: CartItem[]
+  total!: number
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     // this.cart =JSON.parse(localStorage.getItem('cart') || '[]')
     this.cart = this.cartService.getCart()
+    this.total = this.cartService.getTotal()
   }
 emptyCart(){
   this.cartService.clear()
+  location.reload()
 }
 }
