@@ -9,8 +9,20 @@ export class CartService {
   cart: CartItem[] =JSON.parse(localStorage.getItem('cart')||'[]') ;
   constructor() { 
   }
-  add(cartItem: CartItem): CartItem[] {
-    this.cart.push(cartItem);
+  add(product: Product, qty: number): CartItem[] {
+    if (this.cart.length > 0){
+      
+      this.cart.forEach(function(item){
+        if (item.product.id == product.id){
+          item.qty = item.qty + qty;
+          return item
+        }else{
+          return false
+        }
+        }
+      )
+    }
+    this.cart.push({product:product, qty:qty})
     this.saveCart()
     return this.cart
   }
@@ -36,4 +48,5 @@ export class CartService {
   saveCart():void{
     localStorage.setItem('cart',JSON.stringify(this.cart))
   }
+
 }

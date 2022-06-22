@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CartItem } from 'src/app/models/cartItem.model';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../../models/product.model';
@@ -11,7 +12,7 @@ import { Product } from '../../models/product.model';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
-  cart: Product[] = [];
+  cart: CartItem[] = [];
   constructor(
     private productService: ProductService,
     private cartService: CartService,
@@ -25,7 +26,7 @@ export class ProductListComponent implements OnInit {
     this.cart = this.cartService.cart;
   }
   addToCart(product: Product): void {
-    this.cartService.add(product);
+    this.cartService.add(product, 1);
     this._snackBar.open(product.name + ' Added to Cart',"",{duration:1000})
   }
 }
