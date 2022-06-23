@@ -16,7 +16,7 @@ export class CartItemComponent implements OnInit {
   ngOnInit(): void {
   }
   handleChange(){
-  
+  this.addCartItem.emit(this.cartItem)
     }
   
 

@@ -21,4 +21,8 @@ emptyCart(){
   this.cartService.clear()
   location.reload()
 }
+addCartItem(cartItem: CartItem){
+  this.cartService.addItem(cartItem)
+  this.total = this.cartService.getTotal()
+}
 }
