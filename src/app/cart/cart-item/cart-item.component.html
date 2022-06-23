@@ -1,4 +1,5 @@
 <div class="cart-container">
+
   <div class="cart-item">
     <img
       class="item-img"
@@ -23,4 +24,5 @@
     </mat-form-field>
     <h3>SubTotal: {{ (cartItem.qty * cartItem.product.price).toFixed(2) }}</h3>
   </div>
+  <mat-icon (click)="removeItem()">clear</mat-icon>
 </div>

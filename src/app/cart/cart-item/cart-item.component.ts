@@ -11,6 +11,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartItemComponent implements OnInit {
   @Input() cartItem!: CartItem
   @Output() addCartItem: EventEmitter<CartItem> = new EventEmitter()
+  @Output() removeCartItem: EventEmitter<CartItem> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +19,9 @@ export class CartItemComponent implements OnInit {
   handleChange(){
   this.addCartItem.emit(this.cartItem)
     }
+  removeItem(){
+    this.removeCartItem.emit(this.cartItem)
+  }
   
 
 }
