@@ -10,13 +10,19 @@
       Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
-  <div>
-  
-    <button mat-button (click)="emptyCart()">
-      <mat-icon>clear_all</mat-icon>
-      Empty Cart
-    </button>
-  </div>
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        type="text"
+        value=""
+        [(ngModel)]="cartItem.qty"
+        (change)="handleChange()"
+      />
+      <button mat-button (click)="emptyCart()">
+        <mat-icon>clear_all</mat-icon>
+        Empty Cart
+      </button>
+    </mat-form-field>
 </div>
 <!-- <div>
 </div> -->
