@@ -13,7 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { CartModule } from './cart/cart.module';
 
 @NgModule({

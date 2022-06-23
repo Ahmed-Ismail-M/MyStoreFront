@@ -9,7 +9,18 @@
   <div class="cart-item-details">
     <h1>{{ cartItem.product.name }}</h1>
     <h2>Price: {{ cartItem.product.price }}</h2>
-    <input type="number" value="{{cartItem.qty}}" max="9999" min="0" [(ngModel)]="cartItem.qty" (change)="handleChange()">
-    <h3>SubTotal: {{ cartItem.qty * cartItem.product.price}}</h3>
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        type="number"
+        value="{{ cartItem.qty }}"
+        max="9999"
+        min="0"
+        [(ngModel)]="cartItem.qty"
+        (change)="handleChange()"
+      />
+    
+    </mat-form-field>
+    <h3>SubTotal: {{ cartItem.qty * cartItem.product.price }}</h3>
   </div>
 </div>
