@@ -18,6 +18,7 @@
         value=""
         [(ngModel)]="user.full_name"
         name="full_name"
+        placeholder="Full Name"
       />
     </mat-form-field>
     <mat-form-field>
@@ -27,10 +28,11 @@
         value=""
         [(ngModel)]="user.address"
         name="address"
+        placeholder="Address"
       />
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" value="" [(ngModel)]="user.cc" name="cc" />
+      <input matInput type="text" value="" [(ngModel)]="user.cc" name="cc" placeholder="Credit card number" />
     </mat-form-field>
 
     <button mat-button (click)="emptyCart()">
