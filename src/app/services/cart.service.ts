@@ -12,10 +12,6 @@ export class CartService {
     if (this.cart.length > 0) {
       for (let cartItem of this.cart) {
         if (item.product.id == cartItem.product.id) {
-          if (item.qty < 1){
-            this.remove(item)
-            return item
-          }
           cartItem.qty = item.qty
           this.saveCart()
         return item}
