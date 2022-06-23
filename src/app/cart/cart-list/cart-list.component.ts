@@ -19,10 +19,10 @@ export class CartListComponent implements OnInit {
     this.cart = this.cartService.getCart()
     this.total = this.cartService.getTotal()
   }
-emptyCart(){
-  this.cartService.clear()
-  location.reload()
-}
+// emptyCart(){
+//   this.cartService.clear()
+//   location.reload()
+// }
 addCartItem(cartItem: CartItem){
   this.cartService.addItem(cartItem)
   this.total = this.cartService.getTotal()
