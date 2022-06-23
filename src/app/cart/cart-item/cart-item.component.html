@@ -24,5 +24,5 @@
     </mat-form-field>
     <h3>SubTotal: {{ (cartItem.qty * cartItem.product.price).toFixed(2) }}</h3>
   </div>
-  <mat-icon (click)="removeItem()">clear</mat-icon>
+  <mat-icon (click)="removeItem()" style="cursor:pointer ;">clear</mat-icon>
 </div>

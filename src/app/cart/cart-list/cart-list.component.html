@@ -1,19 +1,22 @@
 <div class="product-display">
+  <div>
+    <app-cart-item
+      *ngFor="let cartItem of cart"
+      [cartItem]="cartItem"
+      (addCartItem)="addCartItem($event)"
+      (removeCartItem)="removeCartItem($event)"
+    ></app-cart-item>
     <div>
-
-      <app-cart-item
-        *ngFor="let cartItem of cart"
-        [cartItem]="cartItem"
-        (addCartItem)="addCartItem($event)"
-        (removeCartItem)="removeCartItem($event)"
-      ></app-cart-item>
-    </div>
-    <div>
-     
-      <div>Total: <span style="font-weight: bold;">{{total}}</span></div>
-        <button mat-button (click)="emptyCart()">
-          <mat-icon>clear_all</mat-icon>
-            Empty Cart
-        </button>
+      Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
+  <div>
+  
+    <button mat-button (click)="emptyCart()">
+      <mat-icon>clear_all</mat-icon>
+      Empty Cart
+    </button>
+  </div>
+</div>
+<!-- <div>
+</div> -->
