@@ -9,7 +9,7 @@
   <div class="cart-item-details">
     <h1>{{ cartItem.product.name }}</h1>
     <h2>Price: {{ cartItem.product.price }}</h2>
-    <input type="number" value="{{cartItem.qty}}" max="9999" min="0" (change)="handleChange($event)">
+    <input type="number" value="{{cartItem.qty}}" max="9999" min="0" [(ngModel)]="qty" (change)="handleChange($event)">
     <h3>Quantity: {{ cartItem.qty }}</h3>
   </div>
 </div>
