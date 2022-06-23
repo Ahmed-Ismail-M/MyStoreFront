@@ -10,19 +10,34 @@
       Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
-    <mat-form-field appearance="fill">
+  <form>
+    <mat-form-field >
       <input
         matInput
         type="text"
         value=""
-        [(ngModel)]="cartItem.qty"
-        (change)="handleChange()"
+        [(ngModel)]="user.full_name"
+        name="full_name"
       />
-      <button mat-button (click)="emptyCart()">
-        <mat-icon>clear_all</mat-icon>
-        Empty Cart
-      </button>
     </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        value=""
+        [(ngModel)]="user.address"
+        name="address"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" value="" [(ngModel)]="user.cc" name="cc" />
+    </mat-form-field>
+
+    <button mat-button (click)="emptyCart()">
+      <mat-icon>clear_all</mat-icon>
+      Empty Cart
+    </button>
+  </form>
 </div>
 <!-- <div>
 </div> -->
