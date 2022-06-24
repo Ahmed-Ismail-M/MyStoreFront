@@ -5,17 +5,20 @@ import { CartItemComponent } from './cart-item/cart-item.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-
-
 
 @NgModule({
   declarations: [CartListComponent, CartItemComponent],
   imports: [
-    CommonModule, MatCardModule,MatIconModule, FormsModule,MatInputModule, MatButtonModule
+    CommonModule,
+    MatCardModule,
+    MatIconModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
   ],
-  exports:[CartListComponent]
-  
+  exports: [CartListComponent],
 })
-export class CartModule { }
+export class CartModule {}

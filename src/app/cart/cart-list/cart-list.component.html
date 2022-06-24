@@ -10,17 +10,17 @@
       Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
-  <form (ngSubmit)="confirm()">
+  <form  (ngSubmit)="confirm()" [formGroup]="userForm">
     <mat-form-field>
       <input
         matInput
         type="text"
         value=""
-        [(ngModel)]="user.full_name"
         name="full_name"
         placeholder="Full Name"
         required
         minlength="4"
+        formControlName="full_name"
       />
     </mat-form-field>
     <mat-form-field>
@@ -28,7 +28,6 @@
         matInput
         type="text"
         value=""
-        [(ngModel)]="user.address"
         name="address"
         placeholder="Address"
         required
@@ -40,7 +39,6 @@
         matInput
         type="text"
         value=""
-        [(ngModel)]="user.cc"
         name="cc"
         placeholder="Credit card"
         required
