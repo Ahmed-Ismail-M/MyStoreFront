@@ -41,7 +41,6 @@ removeCartItem(cartItem:CartItem){
 }
 confirm(){
   if (this.userForm.valid){
-
     this.router.navigateByUrl('confirmation', {state:{'user':this.user, 'total': this.total}})
   }
   console.log(this.user)
