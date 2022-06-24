@@ -4,7 +4,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
-import { Random } from './utils/random';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
@@ -14,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CartModule } from './cart/cart.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -33,9 +33,11 @@ import { CartModule } from './cart/cart.module';
     MatIconModule,
     MatToolbarModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatButtonModule
   ],
-  providers: [Random],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
