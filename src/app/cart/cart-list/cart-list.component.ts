@@ -33,6 +33,9 @@ removeCartItem(cartItem:CartItem){
   this.total = this.cartService.getTotal()
 }
 confirm(){
-this.router.navigateByUrl('confirmation', {state:{'user':this.user, 'total': this.total}})
+  if(Number(this.total) > 0){
+
+    this.router.navigateByUrl('confirmation', {state:{'user':this.user, 'total': this.total}})
+  }
 }
 }
