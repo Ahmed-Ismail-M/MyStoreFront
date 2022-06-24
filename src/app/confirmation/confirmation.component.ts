@@ -12,6 +12,8 @@ export class ConfirmationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.user = history.state.user
+    this.total = history.state.total
   }
 
 }
