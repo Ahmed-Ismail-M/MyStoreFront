@@ -10,7 +10,7 @@
       Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
-  <form>
+  <form (ngSubmit)="confirm()">
     <mat-form-field>
       <input
         matInput
@@ -47,7 +47,7 @@
         minlength="4"
       />
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="confirm()">
+    <button type="submit" mat-raised-button color="primary" >
       Submit
     </button>
     <!-- <button mat-button (click)="emptyCart()">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartItem } from 'src/app/models/cartItem.model';
 import { User } from 'src/app/models/user.model';
@@ -13,12 +14,18 @@ export class CartListComponent implements OnInit {
   cart!: CartItem[]
   total!: string
   user: User = {full_name:"", address:"", cc:""}
+  userForm! : FormGroup
   constructor(private cartService: CartService, private router : Router) { }
 
   ngOnInit(): void {
     // this.cart =JSON.parse(localStorage.getItem('cart') || '[]')
     this.cart = this.cartService.getCart()
     this.total = this.cartService.getTotal()
+    this.userForm = new FormGroup(
+      {
+        full_name: new FormControl(this.user.full_name,[Validators.required,Validators.minLength(4),]),
+      }
+    )
   }
 // emptyCart(){
 //   this.cartService.clear()
@@ -33,9 +40,10 @@ removeCartItem(cartItem:CartItem){
   this.total = this.cartService.getTotal()
 }
 confirm(){
-  if(Number(this.total) > 0){
+  if (this.userForm.valid){
 
     this.router.navigateByUrl('confirmation', {state:{'user':this.user, 'total': this.total}})
   }
+  console.log(this.user)
 }
 }
