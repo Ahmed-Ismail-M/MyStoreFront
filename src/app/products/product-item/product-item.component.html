@@ -10,6 +10,8 @@
       <p>
         {{ product.descr }}
       </p>
-    <a [routerLink]='""' routerLinkActive="active"> <mat-icon>arrow_back</mat-icon> Back to Products List </a>
+    <button mat-raised-button color="primary" (click)="back()" >
+     <mat-icon>arrow_back</mat-icon> Back to Products List
+    </button>
   </div>
 </div>

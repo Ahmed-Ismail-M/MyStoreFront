@@ -13,7 +13,8 @@ export class ProductItemComponent implements OnInit {
   product: Product;
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) {
     this.product = {
       id: 0,
@@ -30,5 +31,8 @@ export class ProductItemComponent implements OnInit {
     this.productService.getProduct(product_id).subscribe((resp) => {
       this.product = resp as Product;
     });
+  }
+  back(){
+    this.router.navigate([''])
   }
 }

@@ -7,6 +7,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    MatCardModule, RouterModule, MatIconModule, FormsModule
+    MatCardModule, RouterModule, MatIconModule, FormsModule, MatButtonModule
   ], exports:[
     ProductListComponent
   ]
