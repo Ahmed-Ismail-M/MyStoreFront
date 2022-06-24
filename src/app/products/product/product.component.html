@@ -16,7 +16,7 @@
   </mat-card-content>
   <mat-card-actions>
 
-      <input matInput type="number"  name="qty" max="9999" min="1" [(ngModel)]="qty">
-      <button  mat-raised-button color="accent" type="submit" (click)="onSubmit()">Add to Cart</button>
-  </mat-card-actions>
+      <input  type="number"  name="qty" max="9999" min="1" [(ngModel)]="qty" class="input-align">
+    </mat-card-actions>
+    <button  mat-raised-button color="accent" type="submit" (click)="onSubmit()">Add to Cart</button>
 </mat-card>
