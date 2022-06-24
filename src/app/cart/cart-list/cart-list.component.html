@@ -11,7 +11,7 @@
     </div>
   </div>
   <form>
-    <mat-form-field >
+    <mat-form-field>
       <input
         matInput
         type="text"
@@ -19,6 +19,8 @@
         [(ngModel)]="user.full_name"
         name="full_name"
         placeholder="Full Name"
+        required
+        minlength="4"
       />
     </mat-form-field>
     <mat-form-field>
@@ -29,12 +31,25 @@
         [(ngModel)]="user.address"
         name="address"
         placeholder="Address"
+        required
+        minlength="4"
       />
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" value="" [(ngModel)]="user.cc" name="cc" placeholder="Credit card" />
+      <input
+        matInput
+        type="text"
+        value=""
+        [(ngModel)]="user.cc"
+        name="cc"
+        placeholder="Credit card"
+        required
+        minlength="4"
+      />
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="confirm()">Submit</button>
+    <button mat-raised-button color="primary" (click)="confirm()">
+      Submit
+    </button>
     <!-- <button mat-button (click)="emptyCart()">
       <mat-icon>clear_all</mat-icon>
       Empty Cart
