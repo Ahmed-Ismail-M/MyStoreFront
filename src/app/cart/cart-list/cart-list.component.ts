@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartItem } from 'src/app/models/cartItem.model';
 import { User } from 'src/app/models/user.model';
@@ -8,41 +7,36 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
-  styleUrls: ['./cart-list.component.css']
+  styleUrls: ['./cart-list.component.css'],
 })
 export class CartListComponent implements OnInit {
-  cart!: CartItem[]
-  total!: string
-  user: User = {full_name:"", address:"", cc:""}
-  userForm! : FormGroup
-  constructor(private cartService: CartService, private router : Router) { }
+  cart!: CartItem[];
+  total!: string;
+  user: User = { full_name: '', address: '', cc: '' };
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
-    // this.cart =JSON.parse(localStorage.getItem('cart') || '[]')
-    this.cart = this.cartService.getCart()
-    this.total = this.cartService.getTotal()
-    this.userForm = new FormGroup(
-      {
-        full_name: new FormControl(this.user.full_name,[Validators.required,Validators.minLength(4),]),
-      }
-    )
+    this.cart = this.cartService.getCart();
+    this.total = this.cartService.getTotal();
   }
-// emptyCart(){
-//   this.cartService.clear()
-//   location.reload()
-// }
-addCartItem(cartItem: CartItem){
-  this.cartService.addItem(cartItem)
-  this.total = this.cartService.getTotal()
-}
-removeCartItem(cartItem:CartItem){
-  this.cartService.remove(cartItem)
-  this.total = this.cartService.getTotal()
-}
-confirm(){
-  if (this.userForm.valid){
-    this.router.navigateByUrl('confirmation', {state:{'user':this.user, 'total': this.total}})
+
+  addCartItem(cartItem: CartItem) {
+    this.cartService.addItem(cartItem);
+    this.total = this.cartService.getTotal();
   }
-  console.log(this.user)
-}
+  removeCartItem(cartItem: CartItem) {
+    this.cartService.remove(cartItem);
+    this.total = this.cartService.getTotal();
+  }
+  confirm() {
+    if (
+      this.user.full_name.length > 3 &&
+      this.user.address.length > 3 &&
+      this.user.cc.length > 3
+    ) {
+      this.router.navigateByUrl('confirmation', {
+        state: { user: this.user, total: this.total },
+      });
+    }
+  }
 }
