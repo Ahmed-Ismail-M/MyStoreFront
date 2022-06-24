@@ -8,19 +8,19 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [
-    ProductListComponent,
-    ProductComponent,
-    ProductItemComponent,
-  ],
+  declarations: [ProductListComponent, ProductComponent, ProductItemComponent],
   imports: [
     CommonModule,
-    MatCardModule, RouterModule, MatIconModule, FormsModule, MatButtonModule
-  ], exports:[
-    ProductListComponent
-  ]
+    MatCardModule,
+    RouterModule,
+    MatIconModule,
+    FormsModule,
+    MatButtonModule,
+    MatInputModule,
+  ],
+  exports: [ProductListComponent],
 })
-export class ProductsModule { }
+export class ProductsModule {}
