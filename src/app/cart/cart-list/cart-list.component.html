@@ -44,7 +44,9 @@
         name="cc"
         placeholder="Credit card"
         required
-        minlength="4"
+        minlength="16"
+        pattern="\d*"
+        
       />
     </mat-form-field>
     <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary" (click)="confirm()">
