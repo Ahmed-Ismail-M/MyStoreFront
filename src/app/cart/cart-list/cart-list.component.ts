@@ -29,12 +29,7 @@ export class CartListComponent implements OnInit {
     this.total = this.cartService.getTotal();
   }
   confirm() {
-    if (
-      this.user.full_name.length > 3 &&
-      this.user.address.length > 3 &&
-      this.user.cc.length > 3 &&
-      Number(this.total) >0
-    ) {
+    if (Number(this.total) > 0) {
       this.router.navigateByUrl('confirmation', {
         state: { user: this.user, total: this.total },
       });
