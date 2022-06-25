@@ -10,13 +10,14 @@
   <div class="cart-item-details">
     <h1>{{ cartItem.product.name }}</h1>
     <h2>Price: {{ cartItem.product.price }}</h2>
-    <mat-form-field appearance="fill">
+    <mat-form-field >
       <input
         matInput
         type="number"
         value="{{ cartItem.qty }}"
         max="9999"
         min="0"
+        autocomplete="off"
         [(ngModel)]="cartItem.qty"
         (change)="handleChange()"
       />
