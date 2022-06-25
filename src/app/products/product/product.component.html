@@ -14,9 +14,16 @@
       {{ product.descr }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions> 
+    <select [(ngModel)]="qty" (ngModelChange)="qtyChanged($event)" name="qty">
+      <option>
+    </option>
+      <option *ngFor="let no of [].constructor(10) let i = index">
+        {{i+1}}
+    </option>
+    </select>
 
-      <input  type="number"  name="qty" max="9999" min="1" [(ngModel)]="qty" class="input-align">
+      <!-- <input  type="number"  name="qty" max="9999" min="1" [(ngModel)]="qty" class="input-align"> -->
     </mat-card-actions>
     <button  mat-raised-button color="accent" type="submit" (click)="onSubmit()">Add to Cart</button>
 </mat-card>
