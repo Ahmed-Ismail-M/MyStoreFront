@@ -1,8 +1,8 @@
 <mat-card class="card">
   <mat-card-header>
     <div mat-card-avatar class="header-image"></div>
-    <mat-card-title>{{ product.name}}</mat-card-title>
-    <mat-card-subtitle>{{product.price | currency}}</mat-card-subtitle>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
   </mat-card-header>
   <img
     (click)="showDetails(product)"
@@ -15,18 +15,21 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <mat-form-field >
+    <mat-form-field>
       <mat-label>Select Quantity</mat-label>
       <mat-select
         [(ngModel)]="qty"
         (ngModelChange)="qtyChanged($event)"
         name="qty"
       >
-      <!-- <mat-option></mat-option> -->
-      <mat-option *ngFor="let no of [].constructor(10); let i = index" value="{{ i + 1 }}">
-        {{ i + 1 }}</mat-option
-      >
-    </mat-select>
+        <!-- <mat-option></mat-option> -->
+        <mat-option
+          *ngFor="let no of [].constructor(10); let i = index"
+          value="{{ i + 1 }}"
+        >
+          {{ i + 1 }}</mat-option
+        >
+      </mat-select>
     </mat-form-field>
   </mat-card-actions>
   <button mat-raised-button color="accent" type="submit" (click)="onSubmit()">
