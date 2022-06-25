@@ -11,7 +11,7 @@
         {{ product.descr }}
       </p>
       <p>
-        {{ product.price }}$
+        {{ product.price | currency}}
       </p>
     <button mat-raised-button color="primary" (click)="back()" >
      <mat-icon>arrow_back</mat-icon> Back to Products List
