@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartItem } from 'src/app/models/cartItem.model';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
-import { Product } from '../../models/product.model';
+import { Product } from '../../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
