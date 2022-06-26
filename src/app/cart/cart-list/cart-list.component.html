@@ -10,7 +10,7 @@
       Total: <span style="font-weight: bold">{{ total }}</span>
     </div>
   </div>
-  <form #form="ngForm" >
+  <form #form="ngForm">
     <mat-form-field>
       <input
         matInput
@@ -46,10 +46,15 @@
         required
         minlength="16"
         pattern="\d*"
-        
       />
     </mat-form-field>
-    <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary" (click)="confirm()">
+    <button
+      [disabled]="form.invalid"
+      type="submit"
+      mat-raised-button
+      color="primary"
+      (click)="confirm()"
+    >
       Submit
     </button>
     <!-- <button mat-button (click)="emptyCart()">
