@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { CartModule } from './cart/cart.module';
+import { CartModule } from './modules/cart.module';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
