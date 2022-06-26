@@ -22,7 +22,8 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
     MatButtonModule,
     MatInputModule,
-    MatOptionModule, MatSelectModule
+    MatOptionModule,
+    MatSelectModule,
   ],
   exports: [ProductListComponent],
 })
